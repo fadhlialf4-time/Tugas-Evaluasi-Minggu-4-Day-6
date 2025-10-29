@@ -1,108 +1,116 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WardenPilot - Transformasi Digital Masa Depan</title>
+    <title>WardenPilot </title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
             <img src="logo1.png" alt="Logo WardenPilot">
-            <p class="tagline">Transformasi Digital untuk Masa Depan</p>
-        </header>
+                <h1>WardenPilot</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="projects-section">
-            <h2 class="section-title">Produk & Layanan Kami</h2>
+    <section id="home" class="hero">
+        <h2>Securing Your Digital Future</h2>
+        <p>WardenPilot adalah startup teknologi yang berfokus pada solusi keamanan siber dan pengembangan aplikasi berbasis AI untuk melindungi bisnis Anda dari ancaman digital.</p>
+    </section>
 
+    <section id="profile">
+        <h2 class="section-title">Profil Perusahaan</h2>
+        <div class="profile-content">
+            <h3>Tentang WardenPilot</h3>
+            <p>WardenPilot didirikan pada tahun 2024 dengan visi untuk menjadi pelopor dalam solusi keamanan siber berbasis teknologi kecerdasan buatan. Kami percaya bahwa setiap organisasi berhak mendapatkan perlindungan terbaik di era digital ini.</p>
+
+            <h3>Nilai Perusahaan</h3>
+            <p>Inovasi : Selalu mencari cara baru untuk meningkatkan keamanan digital.</p>
+            <p>Integritas : Menjaga kepercayaan klien dengan transparansi dan profesionalisme.</p>
+            <p>Kolaborasi : Bekerja sama dengan klien untuk menciptakan solusi yang sesuai target.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Soon Projects</h2>
+        <div class="project-grid">
             <div class="project-card">
-                <div class="project-icon">🚀</div>
-                <h3>CloudSync Enterprise</h3>
-                <p>Sistem manajemen cloud terintegrasi untuk meningkatkan efisiensi operasional perusahaan dengan skalabilitas tinggi dan keamanan maksimal.</p>
-                <span class="badge badge-green">Live Production</span>
-                <br><br>
-                <a href="#" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+                <div class="project-logo">🛡️</div>
+                <h3>SecureGuard AI</h3>
+                <p>Platform monitoring keamanan jaringan berbasis AI yang mampu mendeteksi ancaman secara real-time dengan akurasi tinggi.</p>
+                <a href="Secure Guard/secure-guard.html" class="btn-detail">Lihat Detail</a>
             </div>
 
             <div class="project-card">
-                <div class="project-icon">📊</div>
-                <h3>DataViz Analytics</h3>
-                <p>Platform visualisasi data real-time dengan dashboard interaktif dan machine learning untuk business intelligence yang lebih akurat.</p>
-                <span class="badge badge-orange">Beta Testing</span>
-                <br><br>
-                <a href="#" class="btn btn-primary">Lihat Demo</a>
+                <div class="project-logo">🔐</div>
+                <h3>CypherVault</h3>
+                <p>Aplikasi manajemen password enterprise dengan ekripsi end-to-end dan autentikasi biometrik multi-layer</p>
+                <br>
+                <a href="Cypher Vault/cypher-vault.html" class="btn-detail">Lihat Detail</a>
             </div>
 
             <div class="project-card">
-                <div class="project-icon">💼</div>
-                <h3>SmartHR Suite</h3>
-                <p>Solusi manajemen SDM end-to-end dengan fitur payroll otomatis, attendance tracking, dan employee performance monitoring berbasis AI.</p>
-                <span class="badge badge-red">Coming Soon</span>
-                <br><br>
-                <a href="#" class="btn btn-primary">Info Selengkapnya</a>
+                <div class="project-logo">📊</div>
+                <h3>ThreatAnalyzer</h3>
+                <p>Dashboard analitik keamanan yang memberikan insight mendalam tentang pola serangan dan vulnerability di sistem Anda.</p>
+                <a href="Threat Analyzer/threat-analyzer.html" class="btn-detail">Lihat Detail</a>
             </div>
+        </div>
+    </section>
 
-            <div class="project-card">
-                <div class="project-icon">🛡️</div>
-                <h3>SecureGuard Pro</h3>
-                <p>Sistem keamanan siber canggih dengan threat detection berbasis AI, enkripsi end-to-end, dan monitoring 24/7 untuk melindungi aset digital perusahaan.</p>
-                <span class="badge badge-green">Available Now</span>
-                <br><br>
-                <a href="#" class="btn btn-primary">Konsultasi Gratis</a>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <h2>Mari Berkolaborasi</h2>
-            <form>
+    <section id="contact">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-form">
+            <form onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" placeholder="Masukkan nama Anda">
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="nama@perusahaan.com">
-                </div>
-                <div class="form-group">
-                    <label for="company">Perusahaan</label>
-                    <input type="text" id="company" placeholder="Nama perusahaan Anda">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Pesan</label>
-                    <textarea id="message" placeholder="Ceritakan tentang proyek atau kebutuhan Anda..."></textarea>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Kirim Pesan</button>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
             </form>
-        </section>
+        </div>
+    </section>
 
-        <footer>
-            <div class="footer-content">
-                <div class="company-name">WardenPilot</div>
-                
-                <div class="footer-section">
-                    <p>Startup teknologi yang berfokus pada solusi digital inovatif untuk transformasi bisnis di era digital.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Lokasi</h4>
-                    <p>Jl. Pegangsaan Barat. 12-14<br>
-                    Jakarta Utara, DKI Jakarta 12190<br>
-                    Indonesia</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <p>Email: hello@wardenpilot.id<br>
-                    Telepon: +62 892 3583 4872<br>
-                    WhatsApp: +62 890 2533 1768</p>
-                </div>
-
-                <div class="copyright">
-                    &copy; 1998 WardenPilot Technology. All Rights Reserved.
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>WardenPilot</h3>
+                <p>Securing Your Digital Future</p>
             </div>
-        </footer>
-    </div>
+            <div class="footer-section">
+                <h3>Lokasi</h3>
+                <p>Jl. Sudirman No. 123</p>
+                <p>Jakarta Selatan, 12190</p>
+                <p>Indonesia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: info@wardenpilot.com</p>
+                <p>Phone: +62 21 1234 5678</p>
+                <p>WhatsApp: +62 812 3456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WardenPilot. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
